@@ -1,9 +1,14 @@
 import pygame
-import assests
-
-def display_screen():
-    screen = pygame.display.set_mode((800,500))
-    background = pygame.image.load('bg.jpg')
+from screen import display_screen
 
 pygame.init()
 display_screen()
+status = True
+while (status):
+    
+    for i in pygame.event.get():
+        
+        if i.type == pygame.QUIT:
+            status = False
+
+pygame.quit()
