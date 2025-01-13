@@ -1,8 +1,9 @@
 import pygame
 import pygame.locals
 
-class Enemy:
+class Enemy(pygame.sprite.Sprite):
     def __init__(self,type,image) -> None:
+        super(Enemy,type,image).__init__()
         self.image = pygame.image.load(image).convert()
         self.type = type
     
@@ -15,7 +16,7 @@ class Enemy:
     #def whatevertype(self):
         #set behavior
 
-class Player:
+class Player(pygame.sprite.Sprite):
     def __init__(self) -> None:
         #self.image = pygame.image.load('''image''').convert()
         pass
